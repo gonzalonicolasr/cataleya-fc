@@ -695,6 +695,11 @@
             overflow: hidden;
         }
 
+        .rsvp > * {
+            position: relative;
+            z-index: 2;
+        }
+
         /* Animated border for RSVP */
         .rsvp::before {
             content: '';
@@ -707,6 +712,8 @@
             mask-composite: exclude;
             -webkit-mask-composite: xor;
             animation: rotateBorder 4s linear infinite;
+            pointer-events: none;
+            z-index: 1;
         }
 
         @keyframes rotateBorder {
