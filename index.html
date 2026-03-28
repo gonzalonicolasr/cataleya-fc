@@ -1411,6 +1411,8 @@
 
         // === TOUCH/CLICK RIPPLE EFFECT ===
         document.addEventListener('click', (e) => {
+            // Skip ripple on form inputs to avoid interfering with focus
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'BUTTON' || e.target.tagName === 'LABEL' || e.target.closest('.rsvp') || e.target.closest('.music-panel')) return;
             const ripple = document.createElement('div');
             ripple.className = 'ripple';
             ripple.style.left = (e.clientX - 10) + 'px';
