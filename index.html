@@ -1477,12 +1477,10 @@
                 setTimeout(() => c.remove(), 4000);
             }
 
-            const nombre_enc = encodeURIComponent(nombre);
-            const cantidad_enc = encodeURIComponent(cantidad);
-            const msg = 'Hola!%20Confirmo%20asistencia%20al%20cumple%20de%20Cataleya%20-%20Guerreras%20K-Pop%20%E2%9C%A8%0A%0ANombre%3A%20' + nombre_enc + '%0ACantidad%3A%20' + cantidad_enc + '%20persona(s)%0A%0ANos%20vemos%20el%205%20de%20abril!%20%F0%9F%8E%89';
+            const texto = 'Hola! Confirmo asistencia al cumple de Cataleya - Guerreras K-Pop *HUNTR/X*\n\nNombre: ' + nombre + '\nCantidad: ' + cantidad + ' persona(s)\n\nNos vemos el 5 de abril!';
 
             setTimeout(() => {
-                window.open(`https://wa.me/542665064412?text=${msg}`, '_blank');
+                window.open('https://wa.me/542665064412?text=' + encodeURIComponent(texto), '_blank');
             }, 400);
         }
 
