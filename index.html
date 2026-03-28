@@ -1477,11 +1477,13 @@
                 setTimeout(() => c.remove(), 4000);
             }
 
+            const sparkle = String.fromCodePoint(0x2728);
+            const party = String.fromCodePoint(0x1F389);
             const msg = encodeURIComponent(
-                `Hola! Confirmo asistencia al cumple de Cataleya - Guerreras K-Pop ✨\n\n` +
-                `Nombre: ${nombre}\n` +
-                `Cantidad: ${cantidad} persona(s)\n\n` +
-                `Nos vemos el 5 de abril! 🎉`
+                'Hola! Confirmo asistencia al cumple de Cataleya - Guerreras K-Pop ' + sparkle + '\n\n' +
+                'Nombre: ' + nombre + '\n' +
+                'Cantidad: ' + cantidad + ' persona(s)\n\n' +
+                'Nos vemos el 5 de abril! ' + party
             );
 
             setTimeout(() => {
